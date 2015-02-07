@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>TTC Sim 2015</title>
+    <title>Toronto Train Controller</title>
 </head>
 <body style="overflow: hidden">
 
@@ -42,7 +42,10 @@
 
     function main() {
         // An array of all the simulation states.
-        var simulation_states = loadTrainData("Testing.txt");
+        var old_path = process.execPath.split('\\');
+        old_path[old_path.length-1] = 'Testing.txt';
+
+        var simulation_states = loadTrainData(old_path.join('\\'));
         // The index of the current simulation state.
         var current_i = 1;
         var current_state = simulation_states[0];

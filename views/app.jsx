@@ -13,7 +13,7 @@ module.exports = (function () {
         },
 
         // Called when the OK button is clicked.
-        clickButton: function () {
+        clickedSelectTrainButton: function () {
             var sim = this.props.simulation_state;
             var ui = this.props.ui_state;
             var self = this;
@@ -54,7 +54,7 @@ module.exports = (function () {
                 <div>
                     <div>
                         <input type="text" value={this.state.trainID} onChange={this.changeTrainID} />
-                        <button onClick={this.clickButton}>OK</button>
+                        <button onClick={this.clickedSelectTrainButton}>OK</button>
                     {trainInfo ? trainInfo : ''}
                     </div>
                 </div>
