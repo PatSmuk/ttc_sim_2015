@@ -56,7 +56,7 @@ module.exports = (function () {
             y -= pix_offset;
         }
 
-        return {x: x, y: y, bo: block_offset, ko: kilo_offset, po: pix_offset};
+        return {x: x, y: y};
     }
 
     function renderTrains(canvasID, simulation_state, ui_state, images) {
@@ -69,15 +69,11 @@ module.exports = (function () {
         simulation_state.trains.forEach(function (train) {
             var loc = getCoords(train.track, train.front_loc);
             var x = loc.x,
-                y = loc.y,
-                bo = loc.bo,
-                ko = loc.ko,
-                po = loc.po;
+                y = loc.y;
             var image = (train.track[1] == 'E' || train.track[1] == 'W') ?
                 images.train : images.train_v;
             context.drawImage(image, x, y);
             //context.fillText('('+x+', '+y+')', x, y-10);
-            //context.fillText(bo+' '+ko+' '+po, x, y-30);
         });
     }
 
