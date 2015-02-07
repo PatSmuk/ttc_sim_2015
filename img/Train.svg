@@ -14,7 +14,7 @@
    id="svg3447"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="New document 21">
+   sodipodi:docname="Train.svg">
   <defs
      id="defs3449" />
   <sodipodi:namedview
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="22"
-     inkscape:cx="33.557869"
-     inkscape:cy="37.997735"
+     inkscape:zoom="7.7781746"
+     inkscape:cx="-32.812413"
+     inkscape:cy="16.158562"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:document-units="px"
@@ -55,37 +55,37 @@
     <rect
        style="fill:#b3b3b3"
        id="rect3517"
-       width="57.454548"
+       width="20"
        height="20"
-       x="3.2727277"
-       y="21.272728"
+       x="22"
+       y="21.401293"
        ry="13.727272"
        rx="13.727273" />
     <rect
        style="fill:#1a1a1a"
-       id="rect3519-7"
-       width="40.18182"
-       height="2"
-       x="12"
-       y="35"
-       rx="13.727273"
-       ry="3.4545455" />
-    <rect
-       style="fill:#1a1a1a"
-       id="rect3519-4"
-       width="40.18182"
-       height="2"
-       x="12"
-       y="30"
-       rx="13.727273"
-       ry="3.4545455" />
-    <rect
-       style="fill:#1a1a1a"
        id="rect3519-46"
-       width="40.18182"
+       width="14.854541"
        height="2"
-       x="12"
-       y="25"
+       x="25"
+       y="26.157084"
+       rx="13.727273"
+       ry="3.4545455" />
+    <rect
+       style="fill:#1a1a1a"
+       id="rect3519-46-4"
+       width="14.854541"
+       height="2"
+       x="25"
+       y="30.344522"
+       rx="13.727273"
+       ry="3.4545455" />
+    <rect
+       style="fill:#1a1a1a"
+       id="rect3519-46-4-3"
+       width="14.854541"
+       height="2"
+       x="25"
+       y="34.587166"
        rx="13.727273"
        ry="3.4545455" />
   </g>

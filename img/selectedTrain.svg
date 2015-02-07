@@ -14,7 +14,7 @@
    id="svg3447"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="Train.svg">
+   sodipodi:docname="TrainCV.svg">
   <defs
      id="defs3449" />
   <sodipodi:namedview
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="22"
-     inkscape:cx="33.557869"
-     inkscape:cy="37.997735"
+     inkscape:zoom="7.7781746"
+     inkscape:cx="-32.812413"
+     inkscape:cy="16.158562"
      inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:document-units="px"
@@ -52,41 +52,44 @@
      id="layer1"
      inkscape:label="Layer 1"
      inkscape:groupmode="layer">
-    <rect
-       style="fill:#ccff00"
-       id="rect3517"
-       width="57.454548"
-       height="20"
-       x="3.2727277"
-       y="21.272728"
-       ry="13.727272"
-       rx="13.727273" />
-    <rect
-       style="fill:#1a1a1a"
-       id="rect3519-7"
-       width="40.18182"
-       height="2"
-       x="12"
-       y="35"
-       rx="13.727273"
-       ry="3.4545455" />
-    <rect
-       style="fill:#1a1a1a"
-       id="rect3519-4"
-       width="40.18182"
-       height="2"
-       x="12"
-       y="30"
-       rx="13.727273"
-       ry="3.4545455" />
-    <rect
-       style="fill:#1a1a1a"
-       id="rect3519-46"
-       width="40.18182"
-       height="2"
-       x="12"
-       y="25"
-       rx="13.727273"
-       ry="3.4545455" />
+    <g
+       id="g3066">
+      <rect
+         rx="13.727273"
+         ry="13.727272"
+         y="21.401293"
+         x="22"
+         height="20"
+         width="20"
+         id="rect3517"
+         style="fill:#ccff00" />
+      <rect
+         ry="3.4545455"
+         rx="13.727273"
+         y="26.157084"
+         x="25"
+         height="2"
+         width="14.854541"
+         id="rect3519-46"
+         style="fill:#1a1a1a" />
+      <rect
+         ry="3.4545455"
+         rx="13.727273"
+         y="30.344522"
+         x="25"
+         height="2"
+         width="14.854541"
+         id="rect3519-46-4"
+         style="fill:#1a1a1a" />
+      <rect
+         ry="3.4545455"
+         rx="13.727273"
+         y="34.587166"
+         x="25"
+         height="2"
+         width="14.854541"
+         id="rect3519-46-4-3"
+         style="fill:#1a1a1a" />
+    </g>
   </g>
 </svg>
