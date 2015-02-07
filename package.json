@@ -1,0 +1,11 @@
+{
+  "name": "react-skeleton",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "author": "Pat Smuk",
+  "license": "MIT",
+  "window": {
+  	"toolbar": false
+  }
+}
