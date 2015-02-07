@@ -73,7 +73,7 @@ module.exports = (function () {
             var image = (train.track[1] == 'E' || train.track[1] == 'W') ?
                 images.train : images.train_v;
             context.drawImage(image, x, y);
-            //context.fillText('('+x+', '+y+')', x, y-10);
+            context.fillText(train.id, x+20, y+20);
         });
     }
 
