@@ -10,11 +10,15 @@
 <script>
     global.document = window.document;
     global.navigator = window.navigator;
-
     require('node-jsx').install();
-    var React = require('react/addons');
-    var App = require('./views/app.jsx');
-    React.render(React.createElement(App), document.getElementById('app'));
+
+    function main() {
+        var React = require('react/addons');
+        var App = require('./views/app.jsx');
+        React.render(React.createElement(App), document.getElementById('app'));
+    }
+
+    main();
 </script>
 </body>
 </html>
