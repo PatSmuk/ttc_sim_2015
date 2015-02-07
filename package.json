@@ -6,6 +6,8 @@
   "author": "Pat Smuk",
   "license": "MIT",
   "window": {
-  	"toolbar": false
+  	"toolbar": false,
+    "width": 1024,
+    "height": 768
   }
 }
