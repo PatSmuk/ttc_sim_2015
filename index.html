@@ -5,17 +5,68 @@
     <title>TTC Sim 2015</title>
 </head>
 <body>
+
 <div id="app"></div>
+<canvas id="trains_canvas"></canvas>
 
 <script>
+    // Set up runtime so that React can work.
     global.document = window.document;
     global.navigator = window.navigator;
     require('node-jsx').install();
 
+    var React = require('react/addons');
+    var App = require('./views/app.jsx');
+
+    var loadTrainData = require('./modules/LoadTrainData').loadTrainData;
+    var checkForCollisions = require('./modules/CheckForCollisions').checkForCollisions;
+    var issueCommand = require('./modules/IssueCommand').issueCommand;
+    var renderTrains = require('./modules/RenderTrains').renderTrains;
+
     function main() {
-        var React = require('react/addons');
-        var App = require('./views/app.jsx');
-        React.render(React.createElement(App), document.getElementById('app'));
+        // An array of all the simulation states.
+        var simulation_states = loadTrainData("Testing.txt");
+        // The index of the current simulation state.
+        var current_i = 1;
+        var current_state = simulation_states[0];
+        // The state of the UI.
+        var ui_state = {
+            zoom_level: 0,
+            map_x: 0,
+            map_y: 0,
+            is_dragging: false,
+            last_mouse_x: 0,
+            last_mouse_y: 0,
+            selected_train: null,
+            simulation_done: false
+        };
+
+        var cancel;
+        // Update the simulation every 0.5 seconds.
+        cancel = setInterval(function () {
+
+            // Get the next state.
+            current_state = simulation_states[current_i];
+
+            // Check for collisions.
+            checkForCollisions(current_state, issueCommand);
+
+            // Check if the simulation is over.
+            current_i += 1;
+            if (current_i >= simulation_state.length) {
+                clearInterval(cancel);
+                ui_state.simulation_done = true;
+            }
+        }, 500);
+
+        // Update the UI every 0.1 seconds.
+        setInterval(function () {
+            // Render the UI.
+            React.render(React.createElement(App, { simulation_state: current_state, ui_state: ui_state }), document.getElementById('app'));
+
+            // Render the trains.
+            renderTrains('trains_canvas', current_state, ui_state);
+        }, 100);
     }
 
     main();
