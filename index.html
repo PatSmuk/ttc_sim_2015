@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <title>TTC Sim 2015</title>
 </head>
-<body>
+<body style="overflow: hidden">
 
-<div id="app"></div>
-<canvas id="trains_canvas"></canvas>
+<canvas id="trains_canvas" width="1280" height="800" style="position: absolute; top: 0; left: 0">
+</canvas>
+
+<div id="app" style="position: absolute; color: white; left: 800px">
+</div>
 
 <script>
     // Set up runtime so that React can work.
     global.document = window.document;
     global.navigator = window.navigator;
     require('node-jsx').install();
+    //require('nw.gui').Window.get().showDevTools();
 
     var React = require('react/addons');
     var App = require('./views/app.jsx');
@@ -22,6 +26,19 @@
     var checkForCollisions = require('./modules/CheckForCollisions').checkForCollisions;
     var issueCommand = require('./modules/IssueCommand').issueCommand;
     var renderTrains = require('./modules/RenderTrains').renderTrains;
+
+    var images = {
+        bg: new Image(),
+        train: new Image(),
+        train_selected: new Image(),
+        train_v: new Image(),
+        train_selected_v: new Image()
+    };
+    images.bg.src = 'img/Map.svg';
+    images.train.src = 'img/Train.svg';
+    images.train_selected.src = 'img/selectedTrain.svg';
+    images.train_v.src = 'img/TrainVert.svg';
+    images.train_selected_v.src = 'img/selectedTrainVert.svg';
 
     function main() {
         // An array of all the simulation states.
@@ -53,7 +70,7 @@
 
             // Check if the simulation is over.
             current_i += 1;
-            if (current_i >= simulation_state.length) {
+            if (current_i >= simulation_states.length) {
                 clearInterval(cancel);
                 ui_state.simulation_done = true;
             }
@@ -65,7 +82,7 @@
             React.render(React.createElement(App, { simulation_state: current_state, ui_state: ui_state }), document.getElementById('app'));
 
             // Render the trains.
-            renderTrains('trains_canvas', current_state, ui_state);
+            renderTrains('trains_canvas', current_state, ui_state, images);
         }, 100);
     }
 
