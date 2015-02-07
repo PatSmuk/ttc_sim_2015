@@ -6,8 +6,12 @@ module.exports = (function () {
         var fs = require('fs');
         var data =  fs.readFileSync(dataFileName);
 
+        // Split the data file line-by-line.
         var array = data.toString().split("\n");
+
+        // For each line...
         for(var line in array) {
+            // Skip line 0 (the labels).
             if(line>0) {
                 var split = array[line].split("\t");//splits data by space
                 if (split.length == 1)
@@ -23,10 +27,13 @@ module.exports = (function () {
                 statusTrain = statusTrain.replace('\r', '');
 
 
+                // If this time doesn't exist yet, create a new object and add it to the data set.
                 var simState = simulationData[time] || { time: time, trains: [] };
                 if (simulationData[time] === undefined) {
                     simulationData[time] = simState;
                 }
+
+                // Add the train state to the simulation data set.
                 simState.trains.push({
                     id: train,
                     front_loc: frtloc,

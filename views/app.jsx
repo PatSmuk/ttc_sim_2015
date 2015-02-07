@@ -7,10 +7,12 @@ module.exports = (function () {
             return { trainID: '' }
         },
 
+        // Called when the user types into the train ID input box.
         changeTrainID: function (event) {
             this.setState({trainID: event.target.value})
         },
 
+        // Called when the OK button is clicked.
         clickButton: function () {
             var sim = this.props.simulation_state;
             var ui = this.props.ui_state;
@@ -32,6 +34,8 @@ module.exports = (function () {
                         train = train_i;
                     }
                 });
+
+                // If a real train is selected, show info.
                 if (train) {
                     trainInfo = (<div>
                         <p>Location: {train.front_loc}</p>
@@ -40,6 +44,8 @@ module.exports = (function () {
                     </div>);
                 }
                 else {
+                    // If an invalid ID is entered, show an error.
+                    // Otherwise, nothing.
                     trainInfo = (this.state.trainID.length > 0) ? (<p>Train not found.</p>) : '';
                 }
             }
